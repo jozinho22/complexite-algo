@@ -1,7 +1,7 @@
 package complexity;
 
 /*
- * Complexité quasi linéaire : O(n x log(n))
+ * Complexité quasi linéaire : O(n x log2(n))
  * Triangulation de Delaunay
  * 
  */

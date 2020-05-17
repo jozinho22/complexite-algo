@@ -21,7 +21,6 @@ public class ConstantComplexity {
 		
 		int[] params = {n, k};
 		
-		
 		int[] integers = Helper.createRandomList(k);
 		double t1 = System.currentTimeMillis();
 		

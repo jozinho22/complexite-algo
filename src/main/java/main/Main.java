@@ -12,12 +12,14 @@ public class Main {
 	public static void main(String[] args) {
 		
 //		ConstantComplexity.get(300, 10000);
-//		LogarithmicComplexity.get(300, 10000);
+//		LogarithmicComplexity.getIterative(3, 10);
+		LogarithmicComplexity.getRecursive(3, 10);
+
 //		LinearComplexity.get(10000);
 		
-//		BubbleOrdering.get(10000);
-//		SelectionOrdering.get(10000);
-		InsertionOrderding.get(20);
+//		BubbleOrdering.get(100000);
+//		SelectionOrdering.get(100000);
+//		InsertionOrderding.get(100000);
 	}
 
 }

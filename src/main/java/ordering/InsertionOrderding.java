@@ -4,8 +4,9 @@ import helper.Helper;
 
 /*
  * Tri par insertion (O(?))
- * 
- * 
+ * On part du second élement de la liste de k éléments, et on le prend comme clé.
+ * Ensuite on compare cette valeur à tous ces prédecesseurs, qui vont prendre la 
+ * place d'après si cette valeur est inférieure à la valeur de son prédecesseur
  * 
  */
 public class InsertionOrderding {
@@ -16,7 +17,7 @@ public class InsertionOrderding {
 		int[] params = { k };
 		int[] integers = Helper.createRandomList(k);
 
-		Helper.displayValeurs(integers, false);
+//		Helper.displayValeurs(integers, false);
 
 		double t1 = System.currentTimeMillis();
 
@@ -37,7 +38,7 @@ public class InsertionOrderding {
 
 		double t2 = System.currentTimeMillis();
 
-		Helper.displayValeurs(integers, true);
+//		Helper.displayValeurs(integers, true);
 
 		Helper.getResults(params, desc, t1, t2);
 
