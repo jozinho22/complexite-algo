@@ -4,18 +4,28 @@ import java.util.List;
 
 import helper.Helper;
 
+/*
+ * Complexité linéaire : O(n)
+ * Parcours de liste de n éléments
+ * 
+ */
 public class LinearComplexity {
 
-	public static void algorythm(int n) {
+	public static void get(int n) {
 
-		List<Integer> list = Helper.createRandomList(n);
+		String desc = "Complexité linéaire O(n)";
+
+		int[] params = {n};
+
+		int[] integers = Helper.createRandomList(n);
 		double t1 = System.currentTimeMillis();
 
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < integers.length; i++) {
+			integers[i] = i;
 		}
 
 		double t2 = System.currentTimeMillis();
-		Helper.getResults(n, "Complexité linéaire O(n)", t1, t2);
+		Helper.getResults(params, desc, t1, t2);
 	}
 
 }

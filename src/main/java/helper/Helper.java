@@ -6,57 +6,61 @@ import java.util.Random;
 
 public class Helper {
 
-	public static void getResults(int param, String complexite, double t1, double t2) {
-		System.out.println("Paramètre n = " + param + " - Complexité de " + complexite);
-		System.out.println(t1);
-		System.out.println(t2);
-		System.out.println("Vitesse d'éxécution : " + (double) (t2 - t1) + "ms");
+	public static void getResults(int[] params, String complexite, double t1, double t2) {
+		for(int k : params) {
+			System.out.println("Paramètre : " + k);
+		}
+		System.out.println("Complexité de " + complexite);
+		System.out.println("t1 = " + t1);
+		System.out.println("t2 = " + t2);
+		System.out.println("Temps d'éxécution : " + (double) (t2 - t1) + "ms");
 		System.out.println("---------------------------------------");
 	}
 
-	public static List<Integer> createRandomList(double n) {
+	public static int[] createRandomList(int n) {
 
-		List<Integer> list = new ArrayList<Integer>();
-
+		int[] integers = new int [n];
+		
 		Random random = new Random();
 
 		for (int i = 0; i < n; i++) {
-			list.add(random.nextInt(1000));
+			integers[i] = random.nextInt(100);
 		}
 
-		return list;
+		return integers;
 
 	}
 
-	public static List<Integer> createOrderedList(double n) {
-		List<Integer> list = new ArrayList<Integer>();
+	public static int[] createOrderedList(int n) {
+		
+		int[] integers = new int [n];
 
 		for (int i = 1; i < n; i++) {
-			Integer number = i;
-			list.add(number);
+			integers[i] = i;
 		}
 
-		return list;
+		return integers;
 
-	}
-
-	public static double logX_inBaseN(int x, int n) {
-		return (Math.log(x) / Math.log(n));
 	}
 	
-	// Méthode de Newton
-	public static double getRacineCarre(int nombre) {
-
-		double X0 = 1;
-		double Xn = (X0 + nombre / X0) / 2;
-
-		double Xn_Plus_1 = 0;
-		for (int i = 0; i < 10; i++) {
-			Xn_Plus_1 = (Xn + nombre / Xn) / 2;
-			Xn = Xn_Plus_1;
+	public static void displayValeurs(int[] integers, boolean triees) {
+		String message ;
+		if(triees) {
+			message = "Valeur triées";
+		} else {
+			message = "Valeur non triées";
 		}
-		System.out.println(Xn_Plus_1);
-		return Xn_Plus_1;
+		System.out.println(message);
+		for(int i : integers) {
+			System.out.println(i);
+		}
+	}
+	
+	public static void displayValeursTriees(int[] integers) {
+		System.out.println("Valeur non triées");
+		for(int i : integers) {
+			System.out.println(i);
+		}
 	}
 
 }

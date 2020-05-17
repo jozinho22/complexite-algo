@@ -1,9 +1,8 @@
-package racinecarree;
+package iterativity;
 
 public class RacineCarree {
-
 	// Méthode de Newton
-	public static double getRacineCarre(int nombre) {
+	public static double get(int nombre) {
 
 		double X0 = 1;
 		double Xn = (X0 + nombre / X0) / 2;
@@ -16,5 +15,4 @@ public class RacineCarree {
 		System.out.println(Xn_Plus_1);
 		return Xn_Plus_1;
 	}
-
 }

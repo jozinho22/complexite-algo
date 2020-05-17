@@ -1,6 +1,6 @@
 package recursivity;
 
-public class Power {
+public class PowerRecursive {
 
 	public static int power(int value, int pow) {
 		if (pow == 0)
