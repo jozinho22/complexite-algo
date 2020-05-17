@@ -2,14 +2,13 @@ package complexity;
 
 import java.util.List;
 
-import domain.Number;
 import helper.Helper;
 
 public class LogarithmicComplexity {
 
 	public static void algorythm(int n, int k) {
 
-		List<Number> list = Number.createOrderedList(n);
+		List<Integer> list = Helper.createOrderedList(n);
 		double t1 = System.currentTimeMillis();
 
 		double size = list.size();

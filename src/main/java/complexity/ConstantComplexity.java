@@ -1,14 +1,14 @@
 package complexity;
 
 import java.util.List;
-import domain.Number;
+
 import helper.Helper;
 
 public class ConstantComplexity {
 
 	public static void algorythm(int n, int k) {
 
-		List<Number> list = Number.createRandomList(n);
+		List<Integer> list = Helper.createRandomList(n);
 		double t1 = System.currentTimeMillis();
 
 		for (int i = 1; i < k ; i++) {

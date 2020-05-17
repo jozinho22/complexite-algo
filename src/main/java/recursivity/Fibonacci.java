@@ -1,4 +1,4 @@
-package complexity.recursivity;
+package recursivity;
 
 public class Fibonacci {
 
@@ -8,6 +8,7 @@ public class Fibonacci {
 	    else if(n == 1)
 	      return 1;
 	   else
+		  System.out.println("in Fibonacci : n = " + fibonacci(n - 1) + fibonacci(n - 2));
 	      return fibonacci(n - 1) + fibonacci(n - 2);
 	}
 }
