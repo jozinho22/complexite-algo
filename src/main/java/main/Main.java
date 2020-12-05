@@ -1,12 +1,18 @@
 package main;
 
-import java.util.Arrays;
-
-import recursivity.Fibonacci;
+import strings.MergeNames;
 
 public class Main {
 	
 	public static void main(String[] args) {
+		
+		String[] tab1 = {"joss", "jack", "jeff", "jill"};
+		String[] tab2 = {"joss", "jane", "julian", "jack"};
+		String[] rep = MergeNames.mergeNames(tab1, tab2);
+		
+		for(String s : rep) {
+			System.out.println(s);
+		}
 		
 //		ConstantComplexity.get(300, 10000);
 //		LogarithmicComplexity.getIterative(3, 10);
