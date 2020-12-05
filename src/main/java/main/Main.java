@@ -6,13 +6,28 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		String[] tab1 = {"joss", "jack", "jeff", "jill"};
-		String[] tab2 = {"joss", "jane", "julian", "jack"};
+		System.out.println("-------------");
+
+		String[] tab1 = {"joss", "jack", "jeff", "jill", "joseph"};
+		String[] tab2 = {"jill", "jane", "julian", "jack", "joseph", "jacky", "joss"};
 		String[] rep = MergeNames.mergeNames(tab1, tab2);
 		
 		for(String s : rep) {
 			System.out.println(s);
 		}
+		
+		System.out.println("-------------");
+		
+		String[] tab3 = {"Robert", "Jacky", "Martine", "Gérard"};
+		String[] tab4 = {"Martine", "Jean-Jacques", "Robert"};
+		String[] rep2 = MergeNames.mergeNames(tab3, tab4);
+		
+		for(String s : rep2) {
+			System.out.println(s);
+		}
+		
+		System.out.println("-------------");
+
 		
 //		ConstantComplexity.get(300, 10000);
 //		LogarithmicComplexity.getIterative(3, 10);
